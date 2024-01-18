@@ -1,16 +1,23 @@
-import Greeter from "./components/Greeter";
-import Greetings from "./components/Greetings";
+import Movies from "./components/Movies";
 
+const movies = [
+  {
+    id: 1,
+    title: "Don't Breathe",
+    year: 2016,
+  },
+  {
+    id: 2,
+    title: "Evil Dead",
+    year: 2013,
+  },
+  {
+    id: 3,
+    title: "The Collector",
+    year: 2009,
+  },
+];
 const App = () => {
-  const fullName = "Arnob";
-  const message = "Assalamualaikum";
-  return (
-    <div>
-      <Greeter fName={fullName} msg={message}>
-        <p>I'm a child prop! </p>
-      </Greeter>
-      {/* <Greetings /> */}
-    </div>
-  );
+  return <Movies movies={movies} />;
 };
 export default App;
